@@ -1,0 +1,514 @@
+gato MACRO
+;AQUI SEBE INSERTAR CDIGO DEL DIBUJO
+
+;COORDENADAS
+    MOV CX,0
+    MOV DX,174
+    pix5:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0010 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,320
+    JNE pix5
+
+    MOV CX,0
+    INC DX
+    CMP DX,200
+    JNE pix5
+
+    ;LUNA***************************************************************************************
+    MOV CX,0
+    MOV DX,0
+    pix6:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0014 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,30
+    JNE pix6
+
+    MOV CX,0
+    INC DX
+    CMP DX,27
+    JNE pix6
+
+    ;rayo lunaaaa
+    ;PINTAR PIXEL
+    MOV CX,37
+    MOV DX,15
+    rayo1:
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0014 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,75
+    JNE rayo1
+
+    ;RAYO 2
+    ;diagonal
+    ;COORDENADAS
+    MOV CX,29
+    MOV DX,31
+    rayo2:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0014 ;color 
+    INT 10H
+
+    INC CX
+    INC DX
+    CMP CX,48
+    JNE rayo2
+
+    ;RAYO 3
+    ;diagonal
+    ;COORDENADAS
+    MOV CX,6
+    MOV DX,34
+    rayo3:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0014 ;color 
+    INT 10H
+
+    INC DX
+    CMP DX,59
+    JNE rayo3
+
+  
+    ;MESA******************************************************************************************
+    ;PATA IZQUIERDA****************************---------------
+    MOV CX,123
+    MOV DX,111
+    pix7:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0006 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,128
+    JNE pix7
+
+    MOV CX,123
+    INC DX
+    CMP DX,173
+    JNE pix7
+
+    ;PATA DERECHA--------------**********************
+    MOV CX,242
+    MOV DX,111
+    pix8:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0006 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,247
+    JNE pix8
+
+    MOV CX,242
+    INC DX
+    CMP DX,173
+    JNE pix8
+
+    ;PARTE DE ARRIBA MESA
+    MOV CX,123
+    MOV DX,111
+    pix9:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0006 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,247
+    JNE pix9
+
+    MOV CX,123
+    INC DX
+    CMP DX,120
+    JNE pix9
+   ;GATITO GRIS ---------------------------------------*********************************************
+    MOV CX,155
+    MOV DX,68
+    pix10:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,191
+    JNE pix10
+
+    MOV CX,155
+    INC DX
+    CMP DX,111
+    JNE pix10
+
+    ;OJOS GATITO ***********
+    MOV CX,162
+    MOV DX,76
+    pix11:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0015 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,169
+    JNE pix11
+
+    MOV CX,162
+    INC DX
+    CMP DX,80
+    JNE pix11
+
+
+    MOV CX,179
+    MOV DX,76
+    pix12:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0015 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,186
+    JNE pix12
+
+    MOV CX,179
+    INC DX
+    CMP DX,80
+    JNE pix12
+
+    ;COLA DEL GATO
+    MOV CX,191
+    MOV DX,110
+    pix13:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,217
+    JNE pix13
+
+    MOV CX,217
+    MOV DX,89
+    pix14:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC DX
+    CMP DX,111
+    JNE pix14
+
+    MOV CX,201
+    MOV DX,89
+    pix15:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,217
+    JNE pix15
+
+
+    MOV CX,201
+    MOV DX,89
+    pix16:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC DX
+    CMP DX,102
+    JNE pix16
+
+
+    MOV CX,201
+    MOV DX,101
+    pix17:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,212
+    JNE pix17
+
+
+    MOV CX,205
+    MOV DX,94
+    pix18:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,212
+    JNE pix18
+
+    MOV CX,205
+    MOV DX,98
+    pix19:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,210
+    JNE pix19
+
+
+    MOV CX,205
+    MOV DX,94
+    pix20:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC DX
+    CMP DX,98
+    JNE pix20
+
+    MOV CX,212
+    MOV DX,94
+    pix21:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC DX
+    CMP DX,102
+    JNE pix21
+
+
+    ;OREJAS DEL GATO---------------*****************************************************************
+    MOV CX,191
+    MOV DX,57
+    pix22:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX
+    INC DX
+    CMP CX,180
+    JNE pix22
+
+    MOV CX,185
+    MOV DX,63
+    pix23:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,191
+    JNE pix23
+
+    MOV CX,185
+    INC DX
+    CMP DX,68
+    JNE pix23
+
+    MOV CX,188
+    MOV DX,60
+    pix24:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,191
+    JNE pix24
+
+    MOV CX,188
+    INC DX
+    CMP DX,68
+    JNE pix24
+
+    MOV CX,191
+    MOV DX,58
+    pix25:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX
+    INC DX
+    CMP CX,181
+    JNE pix25
+
+    MOV CX,184
+    MOV DX,66
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    MOV CX,184
+    MOV DX,67
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    
+    MOV CX,183
+    MOV DX,67
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    ;OREJA IZQUIERDA
+    MOV CX,155
+    MOV DX,59
+    pix30:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,158
+    JNE pix30
+
+    MOV CX,155
+    INC DX
+    CMP DX,68
+    JNE pix30
+
+
+    MOV CX,158
+    MOV DX,62
+    pix31:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,160
+    JNE pix31
+
+    MOV CX,158
+    INC DX
+    CMP DX,68
+    JNE pix31
+
+    MOV CX,155
+    MOV DX,57
+    pix32:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    INC DX
+    CMP CX,166
+    JNE pix32
+
+
+    MOV CX,158
+    MOV DX,62
+    pix33:
+    ;PINTAR PIXEL
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    INC CX
+    CMP CX,161
+    JNE pix33
+
+    MOV CX,158
+    INC DX
+    CMP DX,68
+    JNE pix33
+
+    MOV CX,155
+    MOV DX,58
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+    
+    MOV CX,158
+    MOV DX,61
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    MOV CX,164
+    MOV DX,67
+    pix34:
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX 
+    CMP CX,157
+    JNE pix34
+
+    MOV CX,164
+    MOV DX,66
+    pix35:
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX 
+    CMP CX,157
+    JNE pix35
+
+
+    
+    MOV CX,163
+    MOV DX,65
+    pix36:
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX 
+    CMP CX,157
+    JNE pix36
+
+
+        
+    MOV CX,162
+    MOV DX,64
+    pix37:
+    MOV AH,0CH ;pinta un pixel 
+    MOV AL,0008 ;color 
+    INT 10H
+
+    DEC CX 
+    CMP CX,157
+    JNE pix37
+
+ENDM
